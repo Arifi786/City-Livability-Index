@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Ranking</title>
+</head>
+<body>
+    <h1>City Ranking</h1>
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Overall Score5</th>
+        </tr>
+        {% for city in sorted_cities %}
+        <tr>
+            <td>{{ city.rank }}</td>
+            <td>{{ city.name }}</td>
+            <td>{{ city.state }}</td>
+            <td>{{ city.overall_rank }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Debugging output to verify context in template -->
+    <h2>Debugging Output</h2>
+    <pre>{% for city in sorted_cities %}{{ city }}{% endfor %}</pre>
+</body>
+</html>

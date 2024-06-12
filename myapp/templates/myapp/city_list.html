@@ -1,0 +1,51 @@
+<!-- city_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City List</title>
+</head>
+<body>
+    <h1>City List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>City Name</th>
+                <th>State</th>
+                <th>Population</th>
+                <th>Literacy</th>
+                <th>Growth</th>
+                <th>Crime</th>
+                <th>education</th>
+                <th>Salary</th>
+                <th>Living Cost</th>
+                <th>Pollution</th>
+                <th>Transportation</th>
+                <th>Job</th>
+                <th>health</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for city in cities %}
+            <tr>
+                <td>{{ city.city_name }}</td>
+                <td>{{ city.state }}</td>
+                <td>{{ city.population }}</td>
+                <td>{{ city.literacy }}</td>
+                <td>{{ city.growth }}</td>
+                <td>{{ city.crime }}</td>
+                <td>{{ city.education }}</td>
+                <td>{{ city.Salary }}</td>
+                <td>{{ city.Living_Cost }}</td>
+                <td>{{ city.Pollution }}</td>
+                <td>{{ city.Transportation }}</td>
+                <td>{{ city.Job }}</td>
+                <td>{{ city.health }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
